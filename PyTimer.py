@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-#Test commit
 
 try:
     import time
