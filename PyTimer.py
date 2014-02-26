@@ -30,10 +30,12 @@ class Timer():
             print ("Please enter \'s\', \'m\', or \'h\'. ")
             quit()
         
-    def start(self, begin, timeout):
+    def start(self, timeout):
         """Inizialize the timer"""
+        startTime = (round(int(time.time()), 10))
+        
         timeout = timeout * self.timeoutMultiplier
-        self.end = begin + timeout
+        self.end = startTime + timeout
         #print self.end
         #print (round(int(time.time()), 10))
     pass
