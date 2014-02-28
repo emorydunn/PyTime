@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-
 try:
     import time
 except ImportError:
@@ -13,15 +12,12 @@ class Timer():
         self.accepted = False      
         try:
             if unit == 's':
-                print unit
                 self.timeoutMultiplier = 1
                 pass
             elif unit == 'm':
-                print unit
                 self.timeoutMultiplier = 60
                 pass
             elif unit == 'h':
-                print unit
                 self.timeoutMultiplier = 3600
                 pass
             else:
@@ -30,12 +26,12 @@ class Timer():
             print ("Please enter \'s\', \'m\', or \'h\'. ")
             quit()
         
-    def start(self, begin, timeout):
+    def start(self, timeout):
         """Inizialize the timer"""
+        startTime = (round(int(time.time()), 10))
+        
         timeout = timeout * self.timeoutMultiplier
-        self.end = begin + timeout
-        #print self.end
-        #print (round(int(time.time()), 10))
+        self.end = startTime + timeout
     pass
     
     def test(self):
