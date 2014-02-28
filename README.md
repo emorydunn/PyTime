@@ -9,14 +9,15 @@ Check the status of the timer by with the Timer.accepted variable, and recheck w
 
 Install PyTimer.py into your site-packages directory. 
 
-Basic Usage:
 
 Initialize
 ----------
 clock = Timer(unit)
+
 clock.start(startTime, duration)
 
 Check the timeout status
 ------------------------
 while clock.accepted == False:
+
 clock.test()
