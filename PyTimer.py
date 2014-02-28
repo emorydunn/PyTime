@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+#Version 1.1
+
 try:
     import time
 except ImportError:
