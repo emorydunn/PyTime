@@ -12,15 +12,15 @@ class Timer():
         self.accepted = False      
         try:
             if unit == 's':
-                print unit
+                #print unit
                 self.timeoutMultiplier = 1
                 pass
             elif unit == 'm':
-                print unit
+                #print unit
                 self.timeoutMultiplier = 60
                 pass
             elif unit == 'h':
-                print unit
+                #print unit
                 self.timeoutMultiplier = 3600
                 pass
             else:
