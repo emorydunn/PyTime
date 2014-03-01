@@ -1,65 +1,80 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>PyTimer by emorydunn</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <title>PyTimer by emorydunn</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1 class="header">PyTimer</h1>
-        <p class="header">A very simpler timer script. </p>
+    <div id="container">
+      <div class="inner">
 
-        <ul>
-          <li class="download"><a class="buttons" href="https://github.com/emorydunn/PyTimer/zipball/master">Download ZIP</a></li>
-          <li class="download"><a class="buttons" href="https://github.com/emorydunn/PyTimer/tarball/master">Download TAR</a></li>
-          <li><a class="buttons github" href="https://github.com/emorydunn/PyTimer">View On GitHub</a></li>
-        </ul>
+        <header>
+          <h1>PyTimer</h1>
+          <h2>A very simpler timer script. </h2>
+        </header>
 
-        <p class="header">This project is maintained by <a class="header name" href="https://github.com/emorydunn">emorydunn</a></p>
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/emorydunn/PyTimer/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/emorydunn/PyTimer/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/emorydunn/PyTimer" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
 
+        <hr>
 
-      </header>
-      <section>
-        <h1>
-<a name="pytime" class="anchor" href="#pytime"><span class="octicon octicon-link"></span></a>PyTime</h1>
+        <section id="main_content">
+          <h1>
+<a name="pytimer" class="anchor" href="#pytimer"><span class="octicon octicon-link"></span></a>PyTimer</h1>
 
-<p>A very simpler timer script. </p>
+<p>PyTimer is a simple timeout module. Given a start time and duration it can be querried whenever needed to determine if the elapsed time has passed. It can also easily be called multiple times to run multiple timers. </p>
 
-<p>Initialize the class by passing in the first letter of a unit of time (seconds, minutes, hours). 
-Start the timer by giving the current time and the duration of the timer. 
-Check the status of the timer by with the Timer.accepted variable, and recheck with Timer.test. </p>
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
 
 <p>Install PyTimer.py into your site-packages directory. </p>
 
 <h2>
-<a name="initialize" class="anchor" href="#initialize"><span class="octicon octicon-link"></span></a>Initialize</h2>
+<a name="starting-a-timer" class="anchor" href="#starting-a-timer"><span class="octicon octicon-link"></span></a>Starting a Timer</h2>
 
-<p>clock = Timer(unit)</p>
+<p>The initial call should include the first letter of the desired unit of time. Possible units are seconds, minutes, or hours:</p>
 
-<p>clock.start(startTime, duration)</p>
+<pre><code>&gt;&gt;&gt; clock = Timer(unit)
+</code></pre>
+
+<p>To start the timer give a duration:</p>
+
+<pre><code>&gt;&gt;&gt; clock.start(duration)
+</code></pre>
 
 <h2>
 <a name="check-the-timeout-status" class="anchor" href="#check-the-timeout-status"><span class="octicon octicon-link"></span></a>Check the timeout status</h2>
 
-<p>while clock.accepted == False:</p>
+<p>Check the status of the timer. It returns either <code>True</code> or <code>False</code>. If True the timer has finished:</p>
 
-<p>clock.test()</p>
-      </section>
-      <footer>
-        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
-      </footer>
+<pre><code>&gt;&gt;&gt; clock.accepted
+</code></pre>
+
+<p>Updates <code>clock.accepted</code>, done once when <code>clock.start</code> is called. This must be called every time the status needs to be checked:</p>
+
+<pre><code>&gt;&gt;&gt; clock.test()
+</code></pre>
+        </section>
+
+        <footer>
+          PyTimer is maintained by <a href="https://github.com/emorydunn">emorydunn</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-		
   </body>
 </html>
