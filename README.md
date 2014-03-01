@@ -22,8 +22,8 @@ Check the timeout status
 ------------------------
 Check the status of the timer. It returns either ```True``` or ```False```. If True the timer has finished:
 
-
     >>> clock.accepted
-    >>> clock.test()
 
-Updates ```clock.accepted```, done once when ```clock.start``` is called. This must be called every time the status needs to be checked. 
+Updates ```clock.accepted```, done once when ```clock.start``` is called. This must be called every time the status needs to be checked:
+
+    >>> clock.test()
