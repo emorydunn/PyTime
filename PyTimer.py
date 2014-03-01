@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-#Version 1.1
+#Version 1.2
 
 try:
     import time
