@@ -1,7 +1,10 @@
-PyTime
+PyTimer
 ======
 
-A very simpler timer script. 
+PyTimer is a simple timeout module. Given a start time and duration it can be querried whenever needed to determine if the elapsed time has passed. It can also easily be called multiple times to run multiple timers. 
+
+Installation
+-----
 
 Install PyTimer.py into your site-packages directory. 
 
