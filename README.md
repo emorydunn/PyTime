@@ -1,23 +1,32 @@
-PyTime
+PyTimer
 ======
 
-A very simpler timer script. 
+PyTimer is a simple timeout module. Given a start time and duration it can be querried whenever needed to determine if the elapsed time has passed. It can also easily be called multiple times to run multiple timers. 
 
-Initialize the class by passing in the first letter of a unit of time (seconds, minutes, hours). 
-Start the timer by giving the current time and the duration of the timer. 
-Check the status of the timer by with the Timer.accepted variable, and recheck with Timer.test. 
+Installation
+-----
 
 Install PyTimer.py into your site-packages directory. 
 
 
-Initialize
+Starting a Timer
 ----------
-clock = Timer(unit)
+The initial call should include the first letter of the desired unit of time. Possible units are seconds, minutes, or hours:
 
-clock.start(startTime, duration)
+    >>> clock = Timer(unit)
+
+
+To start the timer give a duration:
+
+    >>> clock.start(duration)
+
 
 Check the timeout status
 ------------------------
-while clock.accepted == False:
+Check the status of the timer. It returns either ```True``` or ```False```. If True the timer has finished:
 
-clock.test()
+    >>> clock.accepted
+
+Updates ```clock.accepted```, done once when ```clock.start``` is called. This must be called every time the status needs to be checked:
+
+    >>> clock.test()
