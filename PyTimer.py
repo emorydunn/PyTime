@@ -10,9 +10,7 @@ except ImportError:
 
 class Timer():
     def __init__(self, unit):
-        #print unit
         unit = str(unit.lower())
-        #print unit
         self.accepted = False      
         try:
             if unit == 's':
@@ -42,7 +40,6 @@ class Timer():
     def start(self, timeout):
         """Inizialize the timer"""
         startTime = (round(int(time.time()), 10))
-        #print timeout
 
         try:
             float(timeout)
