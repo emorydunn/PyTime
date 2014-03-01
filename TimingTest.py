@@ -2,7 +2,7 @@
 import sys, time
 from PyTimer import Timer
 
-duration = input("How long? ")
+duration = raw_input("How long? ")
 unit = raw_input("Unit? ")
 startTime = (round(int(time.time()), 10))
 
